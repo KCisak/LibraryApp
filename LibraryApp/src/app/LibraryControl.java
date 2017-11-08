@@ -59,8 +59,7 @@ public class LibraryControl {
  
     private void printBooks() {
     	
-        library.getBooks();
-System.out.println(library);
+        library.printBooks();
     }
 }
 	
