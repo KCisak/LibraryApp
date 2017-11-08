@@ -13,6 +13,12 @@ public class DataReader {
     public void close() {
         sc.close();
     }
+    
+    public int getInt() {
+        int number = sc.nextInt();
+        sc.nextLine();
+        return number;
+    }
      
     public Book readAndCreateBook() {
         System.out.println("Tytuł: ");
