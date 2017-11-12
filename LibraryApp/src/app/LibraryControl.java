@@ -7,9 +7,9 @@ import data.Library;
 public class LibraryControl {
 
 	// zmienne do kontrolowania programu
-	public final int exit = 0;
-	public final int addBook = 1;
-	public final int printBooks = 2;
+	public final static int EXIT = 0;
+	public final static int ADD_BOOK = 1;
+	public final static int printBooks = 2;
 
 	// zmienna do komunikacji z użytkownikiem
 	private DataReader dataReader;
@@ -28,9 +28,9 @@ public class LibraryControl {
     public void controlLoop() {
         int option;
         printOptions();
-        while ((option = dataReader.getInt()) != exit) {
+        while ((option = dataReader.getInt()) != EXIT) {
             switch (option) {
-            case addBook:
+            case ADD_BOOK:
                 addBook();
                 break;
             case printBooks:
