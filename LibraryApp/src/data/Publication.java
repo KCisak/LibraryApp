@@ -1,10 +1,10 @@
 package data;
- 
+
 public class Publication {
     private int year;
     private String title;
     private String publisher;
-     
+
     public int getYear() {
         return year;
     }
@@ -22,5 +22,11 @@ public class Publication {
     }
     public void setPublisher(String publisher) {
         this.publisher = publisher;
+    }
+
+    protected Publication(int year, String title, String publisher) {
+        setYear(year);
+        setTitle(title);
+        setPublisher(publisher);
     }
 }
