@@ -9,7 +9,7 @@ public class LibraryControl {
 	// zmienne do kontrolowania programu
 	public final static int EXIT = 0;
 	public final static int ADD_BOOK = 1;
-	public final static int printBooks = 2;
+	public final static int PRINT_BOOKS = 2;
 
 	// zmienna do komunikacji z użytkownikiem
 	private DataReader dataReader;
@@ -33,7 +33,7 @@ public class LibraryControl {
             case ADD_BOOK:
                 addBook();
                 break;
-            case printBooks:
+            case PRINT_BOOKS:
                 printBooks();
                 break;
             default:
