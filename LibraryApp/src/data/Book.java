@@ -39,16 +39,12 @@ public class Book extends Publication {
         this.setPages(pages);
         this.setIsbn(isbn);
     }
-
-
-
     @Override
     public String toString() {
         // TODO Auto-generated method stub
         return getTitle() + "; " + getAuthor() + "; " + getYear() + "; " + getPages()
                 + "; " + getPublisher() + "; " + getIsbn();
     }
-
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -82,10 +78,4 @@ public class Book extends Publication {
             return false;
         return true;
     }
-
-
-
-
-
-
 }
