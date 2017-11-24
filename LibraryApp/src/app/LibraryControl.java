@@ -4,6 +4,8 @@ import utils.DataReader;
 import data.Book;
 import data.Library;
 import data.Magazine;
+import data.Publication;
+import utils.LibraryUtils;
 
 public class LibraryControl {
 
@@ -60,7 +62,7 @@ public class LibraryControl {
 	}
 
 	private void printBooks() {
-		library.printBooks();
+		LibraryUtils.printBooks(library);
 	}
 
 	private void addMagazine() {
@@ -69,6 +71,6 @@ public class LibraryControl {
 	}
 
 	private void printMagazines() {
-		library.printMagazines();
+		LibraryUtils.printMagazines(library);
 	}
 }
