@@ -34,8 +34,6 @@ public class Library {
 		publicationsNumber++;
 	}
 
-
-
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();

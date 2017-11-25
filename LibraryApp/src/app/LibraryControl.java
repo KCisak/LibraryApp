@@ -4,7 +4,6 @@ import utils.DataReader;
 import data.Book;
 import data.Library;
 import data.Magazine;
-import data.Publication;
 import utils.LibraryUtils;
 
 public class LibraryControl {
@@ -24,7 +23,7 @@ public class LibraryControl {
 	 * Główna pętla programu, która pozwala na wybór opcji i interakcję
 	 */
 	public void controlLoop() {
-		Option option;
+		Option option = null;
 		printOptions();
 		while ((option = Option.createFromInt(dataReader.getInt())) != Option.EXIT) {
 			switch (option) {
@@ -56,6 +55,35 @@ public class LibraryControl {
 		}
 	}
 
+	//inner class
+
+	private enum Option {
+	    EXIT(0, "Wyjście z programu"),
+	    ADD_BOOK(1, "Dodanie książki"),
+	    ADD_MAGAZINE(2,"Dodanie magazynu/gazety"),
+	    PRINT_BOOKS(3, "Wyświetlenie dostępnych książek"),
+	    PRINT_MAGAZINES(4, "WYświetlenie dostępnych magazynów/gazet");
+
+	    private int value;
+	    private String description;
+
+	   Option(int value, String desc) {
+	        this.value = value;
+	        this.description = desc;
+	    }
+
+	    @Override
+	    public String toString() {
+	        return value + " - " + description;
+	    }
+
+	    public static Option createFromInt(int option) {
+	        return Option.values()[option];
+	    }
+	}
+
+
+
 	private void addBook() {
 		Book book = dataReader.readAndCreateBook();
 		library.addBook(book);
@@ -73,4 +101,6 @@ public class LibraryControl {
 	private void printMagazines() {
 		LibraryUtils.printMagazines(library);
 	}
+
+
 }

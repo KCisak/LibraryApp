@@ -17,7 +17,6 @@ public class LibraryUtils {
 				countBooks++;
 			}
 		}
-
 		if (countBooks == 0) {
 			System.out.println("Brak książek w bibliotece");
 		}
