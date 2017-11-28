@@ -1,7 +1,13 @@
 package data;
 
-public class Book extends Publication {
-    // Pola
+import java.io.Serializable;
+
+public class Book extends Publication implements Serializable{
+    /**
+	 *
+	 */
+	private static final long serialVersionUID = 719100125349561804L;
+	// Pola
     private String author;
     private int pages;
     private String isbn;

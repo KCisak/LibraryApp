@@ -1,5 +1,7 @@
 package utils;
 
+import java.util.Arrays;
+
 import data.Book;
 import data.Magazine;
 import data.Library;
@@ -9,7 +11,9 @@ public class LibraryUtils {
 
 	public static void printBooks(Library lib) {
 		Publication[] publications = lib.getPublications();
+		//sortowanie tablic
 		int publicationsNumber = lib.getPublicationsNumber();
+		 Arrays.sort(publications, new Library.AlphabeticalComparator());
 		int countBooks = 0;
 		for (int i = 0; i < publicationsNumber; i++) {
 			if (publications[i] instanceof Book) {
@@ -24,8 +28,9 @@ public class LibraryUtils {
 
 	public static void printMagazines(Library lib) {
 		Publication[] publications = lib.getPublications();
+	    Arrays.sort(publications, new Library.AlphabeticalComparator());
 		int publicationsNumber = lib.getPublicationsNumber();
-		int countMagazines = 0;
+	   	int countMagazines = 0;
 		for (int i = 0; i < publicationsNumber; i++) {
 			if (publications[i] instanceof Magazine) {
 				System.out.println(publications[i]);

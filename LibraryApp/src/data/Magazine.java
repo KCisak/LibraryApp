@@ -1,7 +1,13 @@
 package data;
 
-public class Magazine extends Publication {
-    private int month;
+import java.io.Serializable;
+
+public class Magazine extends Publication implements Serializable{
+    /**
+	 *
+	 */
+	private static final long serialVersionUID = -8954473963020490687L;
+	private int month;
     private int day;
     private String language;
 
@@ -47,9 +53,7 @@ public class Magazine extends Publication {
           print.append(getLanguage());
           return print.toString();
 
-      //  return getTitle() + "; " + "; " + getPublisher() + "; " + getYear() + "-"
-      //          + getMonth() + "-" + getDay() + "; " + getLanguage();
-    }
+        }
 
     @Override
     public int hashCode() {
