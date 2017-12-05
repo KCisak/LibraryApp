@@ -3,6 +3,7 @@ package utils;
 import java.util.Scanner;
  
 import data.Book;
+import data.LibraryUser;
 import data.Magazine;
  
 public class DataReader {
@@ -59,5 +60,15 @@ public class DataReader {
         sc.nextLine();
          
         return new Magazine(title, publisher, language, year, month, day);
+    }
+    public LibraryUser readAndCreateLibraryUser() {
+        System.out.println("Imię: ");
+        String firstName = sc.nextLine();
+        System.out.println("Nazwisko: ");
+        String lastName = sc.nextLine();
+        System.out.println("PESEL: ");
+        String pesel = sc.nextLine();
+  
+        return new LibraryUser(firstName, lastName, pesel);
     }
 }
